@@ -1,0 +1,1 @@
+$("#crystals-collector").text(Math.floor(Math.random() * 100));
