@@ -1,22 +1,27 @@
 $(".blue").on("click", function() {
-    alert("blue");
+
+    //generate specific crystal amt
+    $("#random-blue").text(Math.floor(Math.random() * 12));
+
+    //add specific crystal amount to player's  score
 });
 
 $(".green").on("click", function() {
-    alert("green");
+    $("#random-two").text(Math.floor(Math.random() * 12));
 });
 
 $(".red").on("click", function() {
-    alert("red");
+    $("#random-three").text(Math.floor(Math.random() * 12));
 });
 
 $(".yellow").on("click", function() {
-    alert("yellow");
-});
+    $("#random-four").text(Math.floor(Math.random() * 12));
+});    
 
-//generate random number between
+$("#crystal-collector").text(Math.floor(Math.random() * 120 ));
+
+//     * Your game will hide this amount until the player clicks a crystal.
+//     * When they do click one, update the player's score counter
 
 
-//screen display of random number
 
-$("#crystal-collector").text(Math.floor(Math.random() * 50));
