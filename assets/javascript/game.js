@@ -1,9 +1,4 @@
-
-// set target equal to random number
-var target = $("#crystal-collector").text(Math.floor(Math.random() * 120 ));
-
-
-
+var target = Math.floor(Math.random() * 120 );
 var bluePoints
 var redPoints
 var greenPoints
@@ -12,14 +7,10 @@ var wins
 var losses
 var playerScore  
 
-//("#random-blue")+("#random-two")+("#random-three")+("#random-four")
+$("#crystal-collector").text(target);
 
 $(".blue").on("click", function() {
-
-    //generate specific crystal amt
     $("#random-blue").text(Math.floor(Math.random() * 12));
-   
-    //add specific crystal amount to player's  score
 });
 
 $(".green").on("click", function() {
@@ -34,9 +25,7 @@ $(".yellow").on("click", function() {
     $("#random-four").text(Math.floor(Math.random() * 12));
 });    
 
-$("#crystal-collector").text(Math.floor(Math.random() * 120 ));{
+// When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
 
-//     * Your game will hide this amount until the player clicks a crystal.
-//     * When they do click one, update the player's score counter
-
-}
+//      * Your game will hide this amount until the player clicks a crystal.
+//      * When they do click one, update the player's score counter.
