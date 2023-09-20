@@ -1,35 +1,35 @@
 var target = Math.floor(Math.random() * 120 );
-var bluePoints = Math.floor(Math.random() * 12);
+var bluePoints = Math.floor(Math.random() * 12); 
 var redPoints = Math.floor(Math.random() * 12);  
 var greenPoints = Math.floor(Math.random() * 12);
 var yellowPoints = Math.floor(Math.random() * 12);
 var wins
 var losses
-var playerScore = 0
+var playerScore = 0 
 
 $("#crystal-collector").text(target);
 
-// * When the player clicks on blue crystal,
 $(".blue").on("click", function() {
-    // $("#random-blue").text(Math.floor(Math.random() * 12));
-    // it will add a specific amount of blue points to the player's total score.
-    playerScore = playerScore + bluePoints;
-    $("#player-score").text(bluePoints);
+    playerScore = playerScore + bluePoints; 
+    $("#player-score").text(playerScore); 
 });
 
-
 $(".green").on("click", function() {
-    $("#random-two").text(Math.floor(Math.random() * 12));
+    playerScore = playerScore + bluePoints + greenPoints;
+    $("#player-score").text(playerScore)
 });
 
 $(".red").on("click", function() {
-    $("#random-three").text(Math.floor(Math.random() * 12));
+    playerScore = playerScore + bluePoints + greenPoints + redPoints;
+    $("#player-score").text(playerScore)
 });
 
 $(".yellow").on("click", function() {
-    $("#random-four").text(Math.floor(Math.random() * 12));
+    playerScore = playerScore + bluePoints + greenPoints + redPoints + yellowPoints;
+    $("#player-score").text(playerScore)
 });    
 
 $("#player-score").text(playerScore) 
 
-
+//      * Your game will hide this amount until the player clicks a crystal.
+//      * When they do click one, update the player's score counter.
