@@ -1,4 +1,5 @@
-var target = Math.floor(Math.random() * 120 );
+// target should be between a random number between 19 and 120
+var target
 var bluePoints = Math.floor(Math.random() * 12); 
 var redPoints = Math.floor(Math.random() * 12);  
 var greenPoints = Math.floor(Math.random() * 12);
@@ -7,13 +8,13 @@ var wins;
 var losses;
 var playerScore = 0; 
 
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min +1)+ min)
+}
+const rndInt = randomIntFromInterval(19, 120)
+ 
 // from the beginning of the game. The player wins if,  total score matches  random number, 
 $("#crystal-collector").text(target);
-
-
-if (playerScore === target) {
-    $("#player-score").text("WIN");
-}
 
 if (playerScore > target) {
     playerScore = $(this).val();
@@ -38,7 +39,11 @@ $(".red").on("click", function() {
 $(".yellow").on("click", function() {
     playerScore = playerScore + yellowPoints;
     $("#player-score").text(playerScore);
-});    
-
-
+});  
 $("#player-score").text(playerScore); 
+
+if (playerScore === target) {
+
+    $("#player-score").text("WIN");
+
+}
