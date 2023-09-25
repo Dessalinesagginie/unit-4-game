@@ -27,3 +27,71 @@
 
 * Each crystal should have a random hidden value between 1 - 12.
 
+
+
+9/25/23 -Html:
+id="crystal-collector": 30
+id="player-score": 30
+
+class="blue", onclick = blueClick()
+class="green", onclick
+class="red", onclick
+class="yellow", onclick
+
+
+--Computer memory:
+target: 30 
+bluePoints: 1
+greenPoints: 3
+redPoints: 5
+yellowPoints: 10
+wins: undefined
+losses: undefined
+playerScore: 0, 1, 11, 21, 26, 29, 30
+
+--Declared Functions: 
+randomIntFromInterval(min, max)
+
+--Code:
+declare randomIntFromInterval function
+declare variables
+$("#player-score").text(playerScore)
+$("#crystal-collector").text(target)
+
+
+declare blueClick 
+declare greenClick
+declare redClick
+declare yellowClick   
+
+// initialization complete
+
+execute blueClick() 
+    playerScore = playerScore + bluePoints, 0 + 1: 1
+    $("#player-score").text(playerScore)
+
+execute yellowClick()
+    playerScore = playerScore + yellowPoints, 11 + 10: 21 
+    $("#player-score").text(playerScore)
+
+execute redClick
+    playerScore = playerScore + redPoints, 21 + 5: 26
+    $("#player-score").text(playerScore)
+
+execute greenClick
+    playerScore = playerScore + greenPoints, 26 + 3: 29
+    $("#player-score").text(playerScore)
+
+execute blueClick() 
+    playerScore = playerScore + bluePoints, 29 + 1: 30
+    $("#player-score").text(playerScore)
+
+
+if (playerScore === target) 
+    $("#player-score").text("You win!")
+else 
+    $("#player-score").text("You lose!")
+
+
+
+
