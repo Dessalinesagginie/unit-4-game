@@ -16,12 +16,6 @@ $("#player-score").text(playerScore);
 
 $("#crystal-collector").text(target);
 
-if (playerScore === target) {
-    $("#player-score").text("WINNER!"); 
-} 
-else {
-    $("#player-score").text("LOOSER");
-} 
 
 $(".blue").on("click", function() {
     playerScore = playerScore + bluePoints; 
@@ -42,5 +36,11 @@ $(".yellow").on("click", function() {
     playerScore = playerScore + yellowPoints;
     $("#player-score").text(playerScore);
 });  
+if (playerScore === target) {
+    $("#you-win").text("1"); 
+} 
+else {
+    $("#you-loss").text("1");
+} 
     
     
