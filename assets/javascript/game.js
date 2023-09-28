@@ -1,3 +1,7 @@
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min +1)+ min)
+}
+
 var target = randomIntFromInterval(19, 120);
 var bluePoints = Math.floor(Math.random() * 12); 
 var redPoints = Math.floor(Math.random() * 12);  
@@ -7,10 +11,6 @@ var wins;
 var losses;
 var playerScore = 0; 
 
-function randomIntFromInterval(min, max) {
-    return Math.floor(Math.random() * (max - min +1)+ min)
-    
-}
 $("#player-score").text(playerScore); 
 // from the beginning of the game. The player wins if,  total score matches  random number, 
 
@@ -36,11 +36,14 @@ $(".yellow").on("click", function() {
     playerScore = playerScore + yellowPoints;
     $("#player-score").text(playerScore);
 });  
+
 if (playerScore === target) {
-    $("#you-win").text("1"); 
-} 
+    playerScore = $(this).val(); 
+    $("#you-win").text("w") 
+}   
 else {
-    $("#you-loss").text("1");
+    $("#you-lose").text("l");
 } 
-    
+// return cntrl to user
+// crystal
     
