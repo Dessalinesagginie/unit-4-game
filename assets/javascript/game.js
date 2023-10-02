@@ -1,26 +1,40 @@
+
+
+function scoreCompare() {
+    if (playerScore === target) {
+        playerScore = $(this).val(); 
+        $("#wins").text(wins) 
+    }   
+    else {
+        $("#losses").text(losses);
+    } 
+}
+
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min +1)+ min)
 }
-
+function blueClick() {
+    playerScore = playerScore + bluePoints; 
+    $("#player-score").text(playerScore);
+}
 var target = randomIntFromInterval(19, 120);
 var bluePoints = Math.floor(Math.random() * 12); 
 var redPoints = Math.floor(Math.random() * 12);  
 var greenPoints = Math.floor(Math.random() * 12);
 var yellowPoints = Math.floor(Math.random() * 12);
-var wins;
-var losses;
+var wins = 0;
+var losses = 0;
 var playerScore = 0; 
 
+$("#wins").text(wins);
+
+$("#losses").text(losses);
+
 $("#player-score").text(playerScore); 
-// from the beginning of the game. The player wins if,  total score matches  random number, 
 
 $("#crystal-collector").text(target);
 
-
-$(".blue").on("click", function() {
-    playerScore = playerScore + bluePoints; 
-    $("#player-score").text(playerScore);
-});
+$(".blue").on("click", blueClick);
 
 $(".green").on("click", function() {
     playerScore = playerScore + greenPoints;
@@ -37,13 +51,5 @@ $(".yellow").on("click", function() {
     $("#player-score").text(playerScore);
 });  
 
-if (playerScore === target) {
-    playerScore = $(this).val(); 
-    $("#you-win").text("w") 
-}   
-else {
-    $("#you-lose").text("l");
-} 
-// return cntrl to user
-// crystal
-    
+//record a win 
+var test3 = 3
