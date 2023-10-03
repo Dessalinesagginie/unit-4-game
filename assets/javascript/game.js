@@ -2,16 +2,15 @@
 
 function scoreCompare() {
     if (playerScore === target) {
-        playerScore = $(this).val(); 
-        $("#wins").text(wins) 
+        $("#wins").text(wins + 1); 
     }   
     else {
-        $("#losses").text(losses);
+        $("#losses").text(1);
     } 
 }
 
 function randomIntFromInterval(min, max) {
-    return Math.floor(Math.random() * (max - min +1)+ min)
+    return Math.floor(Math.random() * (max - min +1)+ min);
 }
 function blueClick() {
     playerScore = playerScore + bluePoints; 
@@ -51,5 +50,9 @@ $(".yellow").on("click", function() {
     $("#player-score").text(playerScore);
 });  
 
-//record a win 
-var test3 = 3
+// record a win 
+// store wins
+wins = wins + 1
+
+playerScore = playerScore + greenPoints;
+// record a loss
