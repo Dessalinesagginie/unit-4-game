@@ -1,29 +1,35 @@
-
+var target;
+var bluePoints; 
+var redPoints;  
+var greenPoints;
+var yellowPoints;
+var wins;
+var losses;
+var playerScore; 
 
 function scoreCompare() {
-    if (playerScore === target) {
-        $("#wins").text(wins + 1); 
+    if (target === playerScore) {
+        wins += 1
+        $("#wins").text(wins)
     }   
     else {
-        $("#losses").text(1);
-    } 
-}
+        losses += 1
+        $("#losses").text(losses);
+    }
+};
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min +1)+ min);
 }
-function blueClick() {
-    playerScore = playerScore + bluePoints; 
-    $("#player-score").text(playerScore);
-}
-var target = randomIntFromInterval(19, 120);
-var bluePoints = Math.floor(Math.random() * 12); 
-var redPoints = Math.floor(Math.random() * 12);  
-var greenPoints = Math.floor(Math.random() * 12);
-var yellowPoints = Math.floor(Math.random() * 12);
-var wins = 0;
-var losses = 0;
-var playerScore = 0; 
+ 
+target = randomIntFromInterval(19, 120);
+bluePoints = randomIntFromInterval(1, 12);
+redPoints = randomIntFromInterval(1, 12); 
+greenPoints = randomIntFromInterval(1, 12);
+yellowPoints = randomIntFromInterval(1, 12);
+wins = 0;
+losses = 0;
+playerScore = 0; 
 
 $("#wins").text(wins);
 
@@ -33,7 +39,11 @@ $("#player-score").text(playerScore);
 
 $("#crystal-collector").text(target);
 
-$(".blue").on("click", blueClick);
+$(".blue").on("click", function() {
+    playerScore = playerScore + bluePoints; 
+    scoreCompare();
+    $("#player-score").text(playerScore);
+});
 
 $(".green").on("click", function() {
     playerScore = playerScore + greenPoints;
@@ -48,11 +58,13 @@ $(".red").on("click", function() {
 $(".yellow").on("click", function() {
     playerScore = playerScore + yellowPoints;
     $("#player-score").text(playerScore);
-});  
+});
 
-// record a win 
-// store wins
-wins = wins + 1
 
-playerScore = playerScore + greenPoints;
+
+
+// store a win
+ 
+
+// playerScore = playerScore + greenPoints;
 // record a loss
