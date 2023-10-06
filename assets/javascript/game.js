@@ -94,9 +94,4 @@ function targetNew()
     target = randomIntFromInterval(19, 120);   
 }
 
-if ( playerScore > target)
-{
-    gameStart ();
-}
-
 
