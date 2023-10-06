@@ -18,6 +18,8 @@ function scoreCompare()
     { 
         wins += 1;
         $("#wins").text(wins);
+        gameStart();
+        targetNew() 
     }  
     else 
     {
@@ -25,6 +27,8 @@ function scoreCompare()
         {
             losses += 1;
             $("#losses").text(losses);
+            gameStart();
+            targetNew() 
         }
     }
 };
@@ -73,8 +77,26 @@ $(".yellow").on("click", function()
     $("#player-score").text(playerScore);
     scoreCompare();
 });
-
 // reset game
-    // playerScore = 0
     // target is reset, new random number
-    // cpoints = reset to new random#
+function gameStart() 
+{
+    target = randomIntFromInterval(19, 120);
+    bluePoints = randomIntFromInterval(1, 12);
+    redPoints = randomIntFromInterval(1, 12); 
+    greenPoints = randomIntFromInterval(1, 12);
+    yellowPoints = randomIntFromInterval(1, 12);
+     playerScore = 0; 
+}
+
+function targetNew() 
+{
+    target = randomIntFromInterval(19, 120);   
+}
+
+if ( playerScore > target)
+{
+    gameStart ();
+}
+
+
