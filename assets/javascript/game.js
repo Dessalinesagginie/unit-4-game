@@ -30,6 +30,7 @@ function scoreCompare()
     { 
         wins += 1;
         $("#wins").text(wins);
+        $("#player-win").text("You Win!!");
         reset();
     }  
     else 
@@ -38,11 +39,11 @@ function scoreCompare()
         {
             losses += 1;
             $("#losses").text(losses);
+            $("#player-win").text("You lose!!");
             reset();
         }
     }
 }
-
 reset();
 
 wins = 0;
@@ -55,6 +56,7 @@ $(".blue").on("click", function()
 {
     playerScore = playerScore + bluePoints; 
     $("#player-score").text(playerScore);
+    
     scoreCompare();
 });
 
