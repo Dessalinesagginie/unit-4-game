@@ -1,0 +1,4 @@
+$(".ashoka").on("click", function() 
+{
+   
+});
