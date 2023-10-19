@@ -3,55 +3,12 @@ body {
     background-repeat: repeat;
 }
   
-#screen {
-    overflow: auto;
-}
-  
-#screen div {
-    float: left;
-}
+
+
 #title {
     width: 250%;
     padding: 5px;
     margin-bottom: 20px;
     color:rgb(140, 0, 255);
     background-color: olivedrab ;
-}
-
-#rules-area {
-    width: 400px;
-    height: 375px;
-    padding: 12px;
-    margin-bottom: 20px;
-    color: rgb(38, 182, 182);
-    background-color:brown
-}
-
-#score-area {
-    width: 210px;
-    height: 100px;
-    padding: 4px;
-    color: rgb(107, 107, 128);
-    background-color: rgb(43, 138, 138);
-}
-
-.crystal-img {
-        width: 80px;
-        height: 80px;
-        cursor: pointer;
-        background-color: rgb(255, 255, 255);
-        border: solid;
-        border-color: lightblue;
-}
-
-#score-number {
-    font-size: 3vw;
-}
-
-#win-area {
-    height: 100px;
-    padding: 4px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    background-color: rgb(25, 0, 255);
 }
