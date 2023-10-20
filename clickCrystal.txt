@@ -1,0 +1,38 @@
+function randomIntFromInterval(min, max) 
+
+target = 4
+bluePoints = 1
+wins
+losses
+playerScore = 4
+
+#player-score = 1
+#cystal-collector = 4
+
+blueClick Declared
+ 
+if playScore === target, 0 === 4, false, 
+#you-lose = l
+ 
+blueClick execute   
+    playerScore = 0 + 1 = 1 
+    // return cntrl to user
+
+blueClick execute
+    playerScore = 1 + 1 = 2
+    // return cntrl to user
+
+blueClick execute
+    playerScore = 2 + 1 = 3
+    // return cntrl to user
+
+blueClick execute
+    playerScore = 3 + 1 = 4
+    // return cntrl to user
+
+wins = 0 + 1
+
+
+    
+
+    
