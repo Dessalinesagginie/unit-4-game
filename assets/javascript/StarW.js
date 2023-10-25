@@ -2,7 +2,12 @@
 
 // Put click function on Ashoka
 
-$(".ashoka").on("click", function() 
+$(".Ahsoka").on("click", function() {
+  $(".h1").text(Ahsoka);
+});
+
+$(".blue").on("click", function() 
 {
-    
+  alert("Yeah buddy")
+  
 });
