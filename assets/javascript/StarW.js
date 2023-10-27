@@ -1,13 +1,12 @@
 
 
-// Put click function on Ashoka
+
+
 
 $(".Ahsoka").on("click", function() {
-  $(".h1").text(Ahsoka);
+  $("#title").text("Ahsoka");
 });
 
-$(".blue").on("click", function() 
-{
-  alert("Yeah buddy")
-  
-});
+// The player will fight as that character for the rest of the game. -->
+
+
