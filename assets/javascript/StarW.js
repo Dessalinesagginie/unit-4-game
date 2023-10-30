@@ -6,14 +6,14 @@
 $(".Ahsoka").on("click", function() {
   $("#title").text("Ahsoka");
 });
-$(".Kylo Ren").on("click", function() {
-  $("#title").text("Kylo Ren");
+$(".Kylo").on("click", function() {
+  $("#title").text("Kylo-Ren");
 });
-$(".Ahsoka").on("click", function() {
-  $("#title").text("Ahsoka");
+$(".Rey").on("click", function() {
+  $("#title").text("Rey");
 });
-$(".Ahsoka").on("click", function() {
-  $("#title").text("Ahsoka");
+$(".Yoda").on("click", function() {
+  $("#title").text("Yoda");
 });
 
 // The player will fight as that character for the rest of the game. -->
