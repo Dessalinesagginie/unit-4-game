@@ -3,10 +3,10 @@
 
 
 
-$(".Ahsoka").on("click", function() {
+$("#Ahsoka").on("click", function() {
   $("#title").text("Ahsoka");
 });
-$(".Kylo").on("click", function() {
+$(".Kylo-Ren").on("click", function() {
   $("#title").text("Kylo-Ren");
 });
 $(".Rey").on("click", function() {
