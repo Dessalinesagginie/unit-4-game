@@ -3,19 +3,22 @@
 
 
 
+// click to select Your character 
+function selectYourCharacter() {
+  console.log("hello");
+}
+
 $("#Ahsoka").on("click", function() {
-  $("#title").text("Ahsoka");
+  selectYourCharacter();
 });
 $(".Kylo-Ren").on("click", function() {
-  $("#title").text("Kylo-Ren");
+  selectYourCharacter();
 });
 $(".Rey").on("click", function() {
-  $("#title").text("Rey");
+  selectYourCharacter();
 });
 $(".Yoda").on("click", function() {
-  $("#title").text("Yoda");
+  selectYourCharacter();
 });
-
-// The player will fight as that character for the rest of the game. -->
 
 
