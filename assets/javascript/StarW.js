@@ -11,7 +11,6 @@ function selectYourCharacter(Ashoka, y) {
 
 $("#Ahsoka").on("click", function() {
   selectYourCharacter(Ashoka, 100);
-  // set value of Ashoka = 1
   Ashoka = Ashoka + 1;
   $("#heading3").text(Ashoka);
 });
