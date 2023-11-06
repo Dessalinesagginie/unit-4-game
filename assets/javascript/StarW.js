@@ -4,8 +4,8 @@
 let Ashoka = 0
 
 // click to select Your character 
-function selectYourCharacter(Ashoka, y) {
-  return Ashoka + y;
+function selectYourCharacter(x, y) {
+  return x + y;
   
 }
 
@@ -26,5 +26,19 @@ $(".Rey").on("click", function() {
 $(".Yoda").on("click", function() {
   selectYourCharacter();
 });
+
+
+
+var Rey = {
+  
+  healthPoints: 150,
+  attackPower:  84,
+  counterAttackPower: 20,
+  
+  
+}
+
+
+
 
 
