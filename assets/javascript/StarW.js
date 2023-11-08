@@ -1,12 +1,26 @@
 let yourCharacter 
 
+let ahsoka = {
+  name: "Ahsoka",
+  healthPoints: 150,
+  attackPower: 150,
+  counterAttackPower: 125
+}
+
+
+let kyloRen = {
+  name: "KyloRen",
+  healthPoints: 150,
+  attackPower: 150,
+  counterAttackPower: 125
+}
+
 let rey = {
   name: "Rey",
   healthPoints: 150,
   attackPower: 150,
   counterAttackPower: 125
 }
-
 let yoda = {
   name: "Yoda",
   healthPoints: 175,
@@ -14,24 +28,18 @@ let yoda = {
   counterAttackPower: 150
 }
 
-function selectYourCharacter(x, y) {
-  return x + y;
-}
-
 $("#Ahsoka").on("click", function() {
-  Ashoka = Ashoka + 1;
-  $("#heading3").text(Ashoka);
+  yourCharacter = ahsoka; 
 });
 
 $(".Kylo-Ren").on("click", function() {
-  selectYourCharacter();
+  yourCharacter = kylo-ren; 
 });
 
 $(".Rey").on("click", function() {
-  selectYourCharacter();
   yourCharacter = rey; 
 });
 
 $(".Yoda").on("click", function() {
-  selectYourCharacter();
+  yourCharacter = yoda; 
 });
